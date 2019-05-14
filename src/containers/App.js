@@ -8,6 +8,7 @@ import NotFound from '../components/ErrorPages/NotFound/NotFound';
 //import OwnerList from './Owner/OwnerList/OwnerList';
 import asyncComponent from '../hoc/AsyncComponent/AsyncComponent';
 import InternalServer from '../components/ErrorPages/InternalServer/InternalServer';
+import CreateOwner from './Owner/CreateOwner/CreateOwner';
 
 const AsyncOwnerList = asyncComponent(() => {
   return import('./Owner/OwnerList/OwnerList');
@@ -30,6 +31,8 @@ class App extends Component {
           <Route path="/owner-list" component={AsyncOwnerList} />
           
           <Route path="/ownerDetails/:id" component={AsyncOwnerDetails} />
+
+          <Route path="/createOwner" component={CreateOwner} />
 
           <Route path="/500" component={InternalServer} />
          
