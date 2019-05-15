@@ -10,9 +10,12 @@ class OwnerDetails extends Component {
  
     componentDidMount = () => {
         let id = this.props.match.params.formID;
+        
         // let url = '/api/FormBoard/' + id + '/account';
         let url = '/api/FormBoard/' + id ;
+        //console.log(`id : ${id} url:${url}`);
         this.props.onGetData(url, { ...this.props })
+        
     }
     renderTypeOfUserConditionally = (owner) => {
         let typeOfUser = null;
@@ -46,7 +49,7 @@ class OwnerDetails extends Component {
     }
     render() {
        const owner = this.props.data;
-       console.log(owner[0].formNo);
+       //console.log(owner[0].formID);
         return (
             <Aux>
                 <Well>

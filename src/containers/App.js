@@ -30,7 +30,9 @@ class App extends Component {
 
           <Route path="/owner-list" component={AsyncOwnerList} />
           
-          <Route path="/ownerDetails/:id" component={AsyncOwnerDetails} />
+
+          {/* 需要將後面的formID更改為TABLE中不同的值 */}
+          <Route path="/ownerDetails/:formID" component={AsyncOwnerDetails} />
 
           <Route path="/createOwner" component={CreateOwner} />
 
