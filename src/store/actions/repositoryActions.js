@@ -83,3 +83,10 @@ export const deleteData = (url, props) => {
         })
     }
 }
+export const closeSuccessModal = (props, url) =>{
+    return {
+        type: actionTypes.CLOSE_SUCCESS_MODAL,
+        props: props,
+        url: url
+    }
+}
